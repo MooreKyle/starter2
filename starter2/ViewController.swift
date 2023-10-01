@@ -21,7 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    //Function: stepperDidChange - Used when user interacts with a UIStepper element in the app. Updates numberOfPetsLabel to display current value of the stepper
+    @IBAction func stepperDidChange(_ sender: UIStepper) {
+          
+          numberOfPetsLabel.text = "\(Int(sender.value))"
+    }
 
 }
 
